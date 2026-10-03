@@ -1,0 +1,56 @@
+/* Marie Esthetique theme — layered over styles.css (which stays verbatim) */
+:root{
+  --ink:#3a2a22;
+  --ink-soft:#5c4a3f;
+  --muted:#8f7668;
+  --cream:#fdf7f2;
+  --paper:#fffdfb;
+  --line:#f0dfd3;
+  --amber:#c19a3f;
+  --amber-dark:#9c7a2e;
+  --dark:#2e211a;
+  --dark-soft:#403026;
+  --blush:#f7e4e9;
+  --font-head:'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:'Barlow', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* softer, rose-tinted hero overlay */
+.hero-overlay{background:linear-gradient(260deg,rgba(46,33,26,.80) 15%,rgba(46,33,26,.45) 55%,rgba(120,70,80,.18) 100%)}
+.hero h1{font-weight:600;letter-spacing:.01em}
+.hero-kicker{color:#e8c97a}
+
+/* service cards carry a photo on top */
+.service-card{overflow:hidden;padding:0}
+.service-card img{width:100%;height:210px;object-fit:cover}
+.service-card .service-body{padding:26px 26px 30px}
+.service-card h3{font-size:1.65rem;margin-bottom:8px}
+.service-card p{color:var(--muted);font-size:.98rem}
+
+/* location cards */
+.loc-card{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.loc-card .loc-body{padding:26px 26px 8px}
+.loc-card h3{font-size:1.7rem;margin-bottom:8px}
+.loc-card p{color:var(--muted);font-size:.98rem}
+.loc-card iframe{width:100%;height:230px;border:0;display:block;margin-top:18px}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.salons-sub{color:var(--muted);max-width:60ch}
+
+/* about section */
+.about{background:var(--blush)}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.about-img img{border-radius:var(--radius);box-shadow:0 24px 60px rgba(58,42,34,.18)}
+.about-copy p{color:var(--ink-soft);font-size:1.06rem;margin-top:14px}
+
+/* reviews band repurposed as booking band */
+.booking-band{background:linear-gradient(135deg,var(--dark) 0%,#4a3428 70%,var(--amber-dark) 140%);color:#fff;text-align:center}
+.booking-band h2{color:#fff}
+.booking-band p{color:#e9ddd2;max-width:56ch;margin:0 auto 28px}
+
+/* footer demo notice */
+.footer-demo{font-size:.82rem;color:#9a8b7d;max-width:70ch;margin:18px auto 0}
+
+@media(max-width:900px){
+  .loc-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+}
